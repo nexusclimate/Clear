@@ -93,27 +93,29 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       padding: 40px 20px;
       background-color: #f5f7fa;
     }
 
     .footer-left {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
 
-    .footer-left img {
-      height: 36px;
-      width: auto;
-    }
-
-    .footer-left p {
+    .footer-left p.footer-tagline {
       margin: 0;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 14px;
       color: #333;
+      font-weight: 500;
+    }
+
+    .footer-left .footer-logo {
+      height: 34px;
+      width: auto;
+      opacity: 0.9;
     }
 
     .footer-right {
@@ -123,6 +125,7 @@
     .footer-right p {
       margin: 4px 0;
       font-weight: 500;
+      font-size: 15px;
     }
 
     a {
@@ -139,11 +142,12 @@
       footer {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
       }
 
       .footer-left, .footer-right {
-        justify-content: center;
-        margin-bottom: 20px;
+        align-items: center;
+        text-align: center;
       }
 
       .footer-right {
@@ -200,8 +204,8 @@
 
 <footer>
   <div class="footer-left">
-    <img src="https://nexus-files.sfo3.digitaloceanspaces.com/nexus-climate-logo.png" alt="Nexus Climate Logo" />
-    <p>An initiative from Nexus Climate</p>
+    <p class="footer-tagline">An initiative from Nexus Climate</p>
+    <img src="Nexus_trans.png" alt="Nexus Climate Logo" class="footer-logo" />
   </div>
   <div class="footer-right">
     <p>Email: <a href="mailto:clear@nexusclimate.co">clear@nexusclimate.co</a></p>
